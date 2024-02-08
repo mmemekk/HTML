@@ -1,0 +1,41 @@
+#DepartureButton, #ArrivalButton {
+    display: inline-block;
+    margin-top: 10px; /* Adjust as needed for spacing */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+        /* Initial style for the hidden text */
+.hidden-text {
+    display: none;
+    color: green;
+}
+
+/* Style for the hidden text when hovering over the trigger text */
+.trigger-text:hover + .hidden-text {
+    display: inline-block; /* Display as inline to appear next to the trigger text */
+
+}
+
+.selected {
+    background-color: #3498db;
+}   
