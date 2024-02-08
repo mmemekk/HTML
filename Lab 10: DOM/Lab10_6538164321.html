@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive To-Do List</title>
+    <style>
+        /* Provided CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Provided HTML structure -->
+    <h1>Interactive To-Do List</h1>
+
+    <form>
+        <label for="taskInput">New Task:</label>
+        <input type="text" id="taskInput" placeholder="Enter task" required>
+        <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+
+    <ul id="taskList">
+        <!-- Tasks will be added dynamically here -->
+    </ul>
+
+    <script>
+      // Enter your script here
+        function addTask(){
+   
+            const taskInput = document.getElementById("taskInput");
+            const taskValue = taskInput.value;
+            const list = document.createElement("li");
+            const ul = document.getElementById("taskList");
+            console.log(taskValue);
+            if (taskValue !== '' && taskValue !== null){
+                list.appendChild(document.createTextNode(taskValue));
+            }
+            else {
+                li.remove();
+            }
+            ul.appendChild(list);
+
+            list.onclick = function(){
+                const updatedText = window.prompt("Enter the updated text:", list.textContent);
+                if (updatedText !== '' && taskValue !== null){
+                    list.textContent = updatedText;
+                } else{
+                    list.remove();
+                }
+
+            }
+            taskInput.value ="";
+
+      }
+
+
+
+
+    </script>
+</body>
+</html>
